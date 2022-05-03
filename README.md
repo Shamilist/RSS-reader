@@ -5,4 +5,4 @@
 
 [![Node CI](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml/badge.svg)](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml)
 
-# Website [RSS Reader] (frontend-project-lvl3-shamilist.vercel.app)#
+# Website [RSS Reader] (frontend-project-lvl3-shamilist.vercel.app) #

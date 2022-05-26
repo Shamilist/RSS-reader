@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Shamilist/frontend-project-lvl3#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "css-loader": "^6.7.1",
     "eslint": "^8.16.0",
@@ -32,7 +34,6 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "@babel/core": "^7.18.2",
     "@popperjs/core": "^2.11.5",
     "babel-loader": "^8.2.5",
     "bootstrap": "^5.1.3",

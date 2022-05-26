@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Shamilist/frontend-project-lvl3#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
     "css-loader": "^6.7.1",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",

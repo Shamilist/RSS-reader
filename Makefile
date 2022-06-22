@@ -1,6 +1,3 @@
-develop:
-	npx webpack serve
-
 install:
 	npm ci
 
@@ -10,3 +7,9 @@ build:
 
 lint:
 	npx eslint .
+
+server:
+	NODE_ENV=development npx webpack serve
+
+test:
+	npm test

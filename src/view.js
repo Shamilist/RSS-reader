@@ -1,12 +1,12 @@
 import onChange from 'on-change';
 import _ from 'lodash';
 
-const renderForm = (watchedState, elements, i18next) => {
+const renderForm = (watchedState, elements, i18) => {
   switch (watchedState.status) {
     case ('invalid'):
       elements.input.classList.add('is-invaid');
       elements.feedback.className = 'text-danger';
-      elements.feedback.textContent = i18next.t(watchedState.error);
+      elements.feedback.textContent = i18.t(watchedState.error);
       elements.input.focus();
       break;
 
@@ -22,7 +22,7 @@ const renderForm = (watchedState, elements, i18next) => {
       elements.input.focus();
       elements.button.disabled = false;
       elements.feedback.className = 'text-success';
-      elements.feedback.textContent = i18next.t('success');
+      elements.feedback.textContent = i18.t('success');
       break;
 
     case ('failure'):
@@ -31,7 +31,7 @@ const renderForm = (watchedState, elements, i18next) => {
       elements.input.focus();
       elements.button.disabled = false;
       elements.feedback.className = 'text-danger';
-      elements.feedback.textContent = i18next.t(watchedState.error);
+      elements.feedback.textContent = i18.t(watchedState.error);
       break;
 
     default:
@@ -39,9 +39,9 @@ const renderForm = (watchedState, elements, i18next) => {
   }
 };
 
-const makeWatchedstate = (state, elements, i18next) => {
+const makeWatchedstate = (state, elements, i18) => {
   const watchedState = onChange(state, (path) => {
-    if (path === 'status') renderForm(watchedState, elements, i18next);
+    if (path === 'status') renderForm(watchedState, elements, i18);
   });
   return watchedState;
 };

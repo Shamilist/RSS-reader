@@ -4,7 +4,7 @@ import translation from './locales/ru.js';
 import axios from 'axios';
 import makeWatchedstate from './view';
 
-export default (i18next) => {
+export default (i18) => {
   const elements = {
     form: document.querySelector('.rss-form'),
     input: document.getElementById('url-input'),
@@ -24,4 +24,39 @@ export default (i18next) => {
     posts: [],
     error: '',
   };
+
+  const watchedState = makeWatchedstate(state, elements, i18);
+
+  yup.setLocale({
+    mixed: {
+      required: () => 'required',
+      notOneOf: () => 'notOneOf',
+    },
+    string: {
+      url: () => 'url',
+    },
+  });
+
+
+
+  
 };
+
+const runApp = () => {
+    const i18nextInstance = i18next.createInstance();
+    i18nextInstance
+      .init({
+        lng: 'ru',
+        resources: {
+          ru: {
+            translation,
+          },
+        },
+      })
+      .then(() => {
+        app(i18nextInstance);
+      });
+  };
+  
+  export default runApp;
+  

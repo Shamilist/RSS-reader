@@ -1,8 +1,10 @@
 import * as yup from 'yup';
 import i18next from 'i18next';
+import translation from './locales/ru.js';
 import axios from 'axios';
+import makeWatchedstate from './view';
 
-export default () => {
+export default (i18next) => {
   const elements = {
     form: document.querySelector('.rss-form'),
     input: document.getElementById('url-input'),

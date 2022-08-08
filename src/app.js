@@ -25,8 +25,6 @@ export default (i18) => {
     error: '',
   };
 
-  const watchedState = makeWatchedstate(state, elements, i18);
-
   yup.setLocale({
     mixed: {
       required: () => 'required',
@@ -37,6 +35,7 @@ export default (i18) => {
     },
   });
 
+  const watchedState = makeWatchedstate(state, elements, i18);
 
 
   

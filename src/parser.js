@@ -37,9 +37,9 @@ const rssParser = (response) => {
   }
 
   const feedInfo = getFeedInfo(data);
-  const post = getFeeds(data);
+  const posts = getFeeds(data);
 
-  return { feedInfo, post };
+  return { feedInfo, posts };
 };
 
 export default rssParser;

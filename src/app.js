@@ -2,7 +2,8 @@ import * as yup from 'yup';
 import i18next from 'i18next';
 import translation from './locales/ru.js';
 import axios from 'axios';
-import makeWatchedstate from './view';
+import makeWatchedstate from './view.js';
+import rssParser from './parser.js';
 
 export default (i18) => {
   const elements = {

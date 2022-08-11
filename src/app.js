@@ -48,10 +48,31 @@ const uploadNewFeed = (url, watchedState) => {
           break;
 
         default:
-          watchedState.status = 'failure';
+          watchedState.error = 'unknown';
           break;
       }
+      watchedState.status = 'failure';
     });
+};
+
+const postsUploading = (watchedState) => {
+  const renewPeriod = 5000;
+
+  const promises = watchedState.feeds.map((feed) => {
+    const proxiedUrl = getProxiedUrl(feed.url);
+    return axios.get(proxiedUrl);
+  });
+  Promise.allSettled(promises).then((responses) => {
+    responses.forEach((response, index) => {
+      if (response.status === 'fulfilles') {
+        const { posts } = rssParser(response.value);
+        const feedID = watchedState.feeds[index].id;
+        addNewPosts(posts, watchedState, feedID);
+      }
+    });
+  }).finally(() => {
+    setTimeout(() => postsUploading(watchedState), renewPeriod);
+  });
 };
 
 const app = (i18) => {
@@ -73,6 +94,10 @@ const app = (i18) => {
     feeds: [],
     posts: [],
     error: '',
+    uiState: {
+      viewedPosts: new Set(),
+      postId: null,
+    }
   };
 
   yup.setLocale({
@@ -105,6 +130,7 @@ const app = (i18) => {
         watchedState.status = 'invalid';
       });
   });
+  postsUploading(watchedState);
 };
 
 const runApp = () => {

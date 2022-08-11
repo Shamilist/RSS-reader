@@ -86,11 +86,19 @@ const renderPosts = (watchedState, elements, i18n) => {
   });
 };
 
+const renderModal = (watchedState, elements) => {
+  const post = watchedState.posts.find((item) => item.id === watchedState.uiState.postId);
+  elements.modalTitle.textContent = post.title;
+  elements.modalBody.textContent = post.body;
+  elements.modalLink.href = post.link;
+};
+
 const makeWatchedstate = (state, elements, i18) => {
   const watchedState = onChange(state, (path) => {
     if (path === 'status') renderForm(watchedState, elements, i18);
     if (path === 'channels') renderFeeds(watchedState, elements);
-    if (path === 'posts') renderPosts(watchedState, elements, i18);
+    if (path === 'uiState.postId') renderModal(watchedState, elements);
+    if (path === 'posts' || path === 'uiState.postId') renderPosts(watchedState, elements, i18);
   });
   return watchedState;
 };

@@ -77,9 +77,9 @@ const postsUploading = (watchedState) => {
 
 const app = (i18) => {
   const elements = {
-    form: document.querySelector('.rss-form'),
-    input: document.getElementById('url-input'),
-    button: document.querySelector('[type="submit"]'),
+    form: document.getElementById('form-rss'),
+    input: document.getElementById('url'),
+    button: document.getElementById('add'),
     feedback: document.getElementById('feedback'),
     modalTitle: document.getElementById('modal-title'),
     modalBody: document.getElementById('modal-body'),

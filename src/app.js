@@ -90,7 +90,7 @@ const app = (i18) => {
   };
 
   const state = {
-    status: 'initialization',
+    status: 'initial',
     feeds: [],
     posts: [],
     error: '',
@@ -114,7 +114,7 @@ const app = (i18) => {
 
   elements.form.addEventListener('submit', (event) => {
     event.preventDefault();
-    watchedState.status = 'initialization';
+    watchedState.status = 'initial';
     const inputValue = elements.input.value;
     const feedsUrl = watchedState.feeds.map((feed) => feed.url);
     const schema = yup.string().url().required().notOneOf(feedsUrl);

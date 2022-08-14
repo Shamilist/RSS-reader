@@ -99,6 +99,7 @@ const app = (i18) => {
       postId: null,
     }
   };
+  console.log('status', state.status);
 
   yup.setLocale({
     mixed: {

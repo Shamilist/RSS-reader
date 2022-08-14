@@ -96,7 +96,7 @@ const renderModal = (watchedState, elements) => {
 const makeWatchedstate = (state, elements, i18) => {
   const watchedState = onChange(state, (path) => {
     if (path === 'status') renderForm(watchedState, elements, i18);
-    if (path === 'channels') renderFeeds(watchedState, elements);
+    if (path === 'feeds') renderFeeds(watchedState, elements);
     if (path === 'uiState.postId') renderModal(watchedState, elements);
     if (path === 'posts' || path === 'uiState.postId') renderPosts(watchedState, elements, i18);
   });

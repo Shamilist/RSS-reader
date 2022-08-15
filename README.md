@@ -3,13 +3,13 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/1792837a09ec38a1aa79/maintainability)](https://codeclimate.com/github/Shamilist/frontend-project-lvl3/maintainability)
 
-[![Node CI](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml/badge.svg)](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml)
+[![Node CI](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml/badge.svg)](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml)     
 
 
-
-## Click [here](https://frontend-project-lvl3-navy-pi.vercel.app/) to start using RSS Reader ##
-
-
+     
+## Click [here](https://frontend-project-lvl3-navy-pi.vercel.app/) to start using RSS Reader ##     
+      
+      
 
 ## How to install RSS Reader ##
 

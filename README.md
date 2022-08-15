@@ -12,13 +12,13 @@
 
 - Install  
 
-    $git clone [https://github.com/aldangold/frontend-project-lvl3.git](https://github.com/Shamilist/frontend-project-lvl3)  
-    $make install  
+        $git clone [https://github.com/aldangold/frontend-project-lvl3.git](https://github.com/Shamilist/frontend-project-lvl3)  
+        $make install  
 
 - Build for production  
 
-    $make build  
+        $make build  
 
 - Build for develop  
 
-    $make develop  
+        $make develop  

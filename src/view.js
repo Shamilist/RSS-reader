@@ -89,7 +89,7 @@ const renderPosts = (watchedState, elements, i18n) => {
 const renderModal = (watchedState, elements) => {
   const post = watchedState.posts.find((item) => item.id === watchedState.uiState.postId);
   elements.modalTitle.textContent = post.title;
-  elements.modalBody.textContent = post.body;
+  elements.modalBody.textContent = post.description;
   elements.modalLink.href = post.link;
 };
 

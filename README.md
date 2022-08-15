@@ -8,7 +8,7 @@
 # Website [RSS Reader](https://frontend-project-lvl3-navy-pi.vercel.app/) #
 
 
-## How to install ##
+## How to install RSS Reader ##
 
 - Install  
 

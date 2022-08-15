@@ -5,7 +5,7 @@
 
 [![Node CI](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml/badge.svg)](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml)
 
-# Website [RSS Reader](https://frontend-project-lvl3-navy-pi.vercel.app/) #
+## Click [here](https://frontend-project-lvl3-navy-pi.vercel.app/) to start using RSS Reader ##
 
 
 ## How to install RSS Reader ##

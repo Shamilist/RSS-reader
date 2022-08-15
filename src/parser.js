@@ -4,8 +4,8 @@ const getFeedInfo = (data) => {
   return { title, description };
 };
 
-const getFeeds = (data) => {
-  const items = data.querySelector('item');
+const getPosts = (data) => {
+  const items = data.querySelectorAll('item');
   const posts = [];
 
   items.forEach((item) => {
@@ -37,7 +37,7 @@ const rssParser = (response) => {
   }
 
   const feedInfo = getFeedInfo(data);
-  const posts = getFeeds(data);
+  const posts = getPosts(data);
 
   return { feedInfo, posts };
 };

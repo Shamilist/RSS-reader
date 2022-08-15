@@ -6,7 +6,7 @@
 [![Node CI](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml/badge.svg)](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml)     
 
 
-RSS readers are used to aggregate news. Users can subscribe to RSS feeds from the websites and sources of interest to them,    
+RSS readers are used to aggregate news. Users can subscribe to RSS feeds from the websites and sources of interest to them, 
 and use an RSS reader to scan headlines and read articles from a variety of sources.    
 Click [here](https://frontend-project-lvl3-navy-pi.vercel.app/) to start using RSS Reader   
       

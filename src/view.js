@@ -4,26 +4,27 @@ import _ from 'lodash';
 const renderForm = (watchedState, elements, i18) => {
   if (watchedState.status === 'invalid') {
     elements.input.classList.add('is-invalid');
-    elements.input.focus();
     elements.feedback.className = 'text-danger';
     elements.feedback.textContent = i18.t(watchedState.error);
+    elements.input.focus();
+  } else if (watchedState.status === 'start') {
     elements.input.readOnly = true;
     elements.button.disabled = true;
   } else if (watchedState.status === 'success') {
     elements.input.value = '';
     elements.input.classList.remove('is-invalid');
     elements.input.readOnly = false;
-    elements.input.focus();
     elements.button.disabled = false;
     elements.feedback.className = 'text-success';
     elements.feedback.textContent = i18.t('success');
+    elements.input.focus();
   } else if (watchedState.status === 'failure') {
     elements.input.classList.add('is-invalid');
     elements.input.readOnly = false;
-    elements.input.focus();
     elements.button.disabled = false;
     elements.feedback.className = 'text-danger';
     elements.feedback.textContent = i18.t(watchedState.error);
+    elements.input.focus();
   }
 };
 

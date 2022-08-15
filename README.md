@@ -6,3 +6,16 @@
 [![Node CI](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml/badge.svg)](https://github.com/Shamilist/frontend-project-lvl3/actions/workflows/makefile.yml)
 
 # Website [RSS Reader](https://frontend-project-lvl3-navy-pi.vercel.app/) #
+
+
+## How to install ##
+
+- Install
+  $git clone https://github.com/aldangold/frontend-project-lvl3.git
+  $make install
+
+- Build for production
+  $make build
+
+- Build for develop
+  $make develop

@@ -64,7 +64,7 @@ const postsUploading = (watchedState) => {
   });
   Promise.allSettled(promises).then((responses) => {
     responses.forEach((response, index) => {
-      if (response.status === 'fulfilles') {
+      if (response.status === 'fulfilled') {
         const { posts } = rssParser(response.value);
         const feedID = watchedState.feeds[index].id;
         addNewPosts(posts, watchedState, feedID);

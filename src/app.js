@@ -97,9 +97,8 @@ const app = (i18) => {
     uiState: {
       viewedPosts: new Set(),
       postId: null,
-    }
+    },
   };
-  console.log('status', state.status);
 
   yup.setLocale({
     mixed: {

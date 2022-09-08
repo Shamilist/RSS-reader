@@ -31,7 +31,7 @@ const renderForm = (watchedState, elements, i18) => {
       elements.input.focus();
       break;
     default:
-      throw new Error('Status not recognized');
+      console.log('Status not recognized');
   }
 };
 

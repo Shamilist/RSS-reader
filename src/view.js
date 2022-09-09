@@ -91,10 +91,18 @@ const renderModal = (watchedState, elements) => {
 
 const makeWatchedstate = (state, elements, i18) => {
   const watchedState = onChange(state, (path) => {
-    if (path === 'status') renderForm(watchedState, elements, i18);
-    if (path === 'feeds') renderFeeds(watchedState, elements);
-    if (path === 'uiState.postId') renderModal(watchedState, elements);
-    if (path === 'posts' || path === 'uiState.postId') renderPosts(watchedState, elements, i18);
+    switch (path) {
+      case ('status'): renderForm(watchedState, elements, i18);
+        break;
+      case ('feeds'): renderFeeds(watchedState, elements);
+        break;
+      case ('uiState.postId'): renderModal(watchedState, elements);
+        renderPosts(watchedState, elements, i18);
+        break;
+      case ('posts'): renderPosts(watchedState, elements, i18);
+        break;
+      default: console.log('Path is not recognized');
+    }
   });
   return watchedState;
 };

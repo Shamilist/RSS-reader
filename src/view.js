@@ -79,6 +79,8 @@ const renderPosts = (watchedState, elements, i18n) => {
 
     const div = document.createElement('div');
     div.classList.add('d-flex', 'justify-content-between', 'align-items-start', 'mb-3');
+    div.setAttribute('rel', 'noopener norefferer');
+    div.setAttribute('target', '_blank');
     div.append(link, button);
     elements.posts.append(div);
   });

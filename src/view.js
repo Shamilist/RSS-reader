@@ -63,8 +63,6 @@ const renderPosts = (watchedState, elements, i18n) => {
     }
     link.textContent = post.title;
     link.href = post.link;
-    link.setAttribute('rel', 'noopener norefferer');
-    link.setAttribute('target', '_blank');
 
     const button = document.createElement('button');
     button.classList.add('btn', 'btn-outline-primary');

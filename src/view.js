@@ -67,6 +67,7 @@ const renderPosts = (watchedState, elements, i18n) => {
     const button = document.createElement('button');
     button.classList.add('btn', 'btn-outline-primary');
     button.setAttribute('data-bs-toggle', 'modal');
+    button.setAttribute('rel', 'noopener norefferer');
     button.setAttribute('data-bs-target', '#modal');
     button.textContent = i18n.t('show');
 

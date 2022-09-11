@@ -33,7 +33,9 @@ const rssParser = (response) => {
   const parserErr = data.querySelector('parsererror');
 
   if (parserErr) {
-    throw new Error('Parsing Error');
+    const error = new Error();
+    error.isParsingError = true;
+    throw error;
   }
 
   const feedInfo = getFeedInfo(data);

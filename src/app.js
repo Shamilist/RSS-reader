@@ -38,12 +38,12 @@ const uploadNewFeed = (url, watchedState) => {
     watchedState.status = 'success';
   })
     .catch((error) => {
-      switch (error.message) {
-        case ('Network Error'):
+      switch (true) {
+        case (error.isAxiosError):
           watchedState.error = 'network';
           break;
 
-        case ('Parsing Error'):
+        case (error.isParsingError):
           watchedState.error = 'parsing';
           break;
 

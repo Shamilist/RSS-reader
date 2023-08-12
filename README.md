@@ -1,4 +1,4 @@
-### Hexlet tests and linter status:
+### Tests and linter status:
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/1792837a09ec38a1aa79/maintainability)](https://codeclimate.com/github/Shamilist/frontend-project-lvl3/maintainability)
 
